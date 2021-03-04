@@ -1,3 +1,5 @@
+![Server Build Status](https://github.com/dark-magic/Clojurius/workflows/Build%20Server/badge.svg)
+
 # Clojurius
 A magical coding game teaching you the best spells clojure has to offer.
 
