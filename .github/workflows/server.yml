@@ -1,0 +1,32 @@
+name: "Build Backend"
+on: push
+jobs:
+  buildNodeBackend:
+    name: "Build Backend Job"
+    runs-on: ubuntu-18.04
+
+    services:
+      neo4j:
+        image: "mongo:4.4.4"
+        ports: 
+          - 27217:27017
+        options: --health-cmd="echo 'db.runCommand('ping').ok' | mongo localhost:27017/test --quiet" --health-timeout="1s" --health-interval="1s" --health-retries="15"
+
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "Setup node 14 LTS"
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: "Install node modules"
+        run: npm ci
+
+      - name: "Run the linter"
+        run: npm run lint
+
+      - name: "Run the backend tests"
+        run: npm run test
+          
