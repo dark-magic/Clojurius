@@ -5,7 +5,7 @@
   "main": "src/server",
   "scripts": {
     "start": "node src/server",
-    "lint": "eslint src",
+    "lint": "eslint src test",
     "test": "cucumber-js --publish-quiet -r test/steps.js test/features/",
     "db": "docker run --rm -d -p 27217:27017 mongo"
   },

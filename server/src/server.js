@@ -7,7 +7,7 @@ async function start() {
   console.log('Loading the config...');
   const config = loadConfig();
 
-  console.log('Connecting to the database...');
+  console.log(`Connecting to the database at ${config.DB_URI}...`);
   await connectToDb(config);
 
   console.log('Starting the server...');
