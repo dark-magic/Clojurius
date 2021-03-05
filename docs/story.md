@@ -51,7 +51,7 @@ Remember, the forest is cursed so your connection to him will not always be stab
       - game verifies the actions
 
 
-# Example Run
+# Example Flow
 - Register User
 - Choose a difficulty
 - See an animation introducing us to the background story
