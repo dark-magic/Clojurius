@@ -9,7 +9,7 @@ jobs:
       mongo:
         image: "mongo:4.4.4"
         ports: 
-          - 27217:27017
+          - 27017:27017
         options: --health-cmd="echo 'db.runCommand(\"ping\").ok' | mongo localhost:27017/test --quiet" --health-timeout="1s" --health-interval="1s" --health-retries="15"
 
     steps:

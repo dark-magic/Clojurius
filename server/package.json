@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server",
     "lint": "eslint src test",
-    "test": "cucumber-js --publish-quiet -r test/steps.js test/features/",
+    "test": "cucumber-js --publish-quiet --exit -r test/steps.js test/features/",
     "db": "docker run --rm -d -p 27217:27017 mongo"
   },
   "repository": {
@@ -29,7 +29,8 @@
     "cors": "^2.8.5",
     "dotenv-flow": "^3.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.18"
+    "mongoose": "^5.11.18",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.0.0",
